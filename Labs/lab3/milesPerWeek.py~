@@ -1,0 +1,21 @@
+# File: milesPerWeek.py 
+# Author: Siril Pattammady 
+# Date: 9/19/2016 
+# Section: SECTION 06 
+# E-mail: psiril1@umbc.edu 
+# Description: Calculating how many miles you commute per week. 
+# Collaboration: During lab, collaboration between students is allowed, 
+# although I understand I still must understand the material 
+# and complete the assignment myself. 
+
+def main ():
+
+    one_way_d = float(input("How many miles is the trip one-way?: "))
+    num_days = int(input(" How many days a week do you go to work?: "))
+    MPH = 57
+    total_distance = (one_way_d * 2)*(num_days)
+    total_hours = (total_distance/MPH)
+    print(" miles driven per week: " , total_distance)
+    print(" hours spent driving per week: " , total_hours)
+   
+main() 

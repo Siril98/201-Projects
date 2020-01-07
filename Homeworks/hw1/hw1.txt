@@ -1,0 +1,72 @@
+Siril Pattammady
+September 13,2016
+Section 01 
+Lab Section 06
+Statement: I collaborated with Harsh Patel (harsh3@umbc.edu) He helped me 
+understand the assignment.
+
+Question 1
+1. Obtain all the authors last names from the single shelf of books
+2. Initialize a variable “num” to represent a list from 1 to 26
+3. Initialize a variable “char” where “char” equals the letters A through Z
+ alphabetically
+4. Create a list with all the last names of every author in the amount of books
+ given.
+5. If “num” list 1 equals “char” letter A then set last name of Author in list A.
+  If not continue to next list until no last names remains.
+6. Now every list(1-26)  should have a set of last names (A-Z)
+7. Create a sublist within each list to make each list alphabetized.
+8. If “num” list 1  equals “char” letter A then continue to the next letter ,if
+ any, and look at the second letter. If letter equals A continue to the next
+ last name. If not continue in alphabetical order (A-Z) through each name till
+ organized.
+9. Repeat step 8 with every list to ensure every list is in alphabetical order.
+10. When all last names are check and organized compile “num” list 1-26 in order
+ and begin placing all books on the shelf as “num” list 1-26 records.
+11. Present the final organized shelf of books in alphabetical order by author's
+ last name
+
+Question 2
+
+1.Obtain word from user
+2.Initialize a variable “char” where “char” equals the letters A through Z
+ alphabetically
+3. Set variable x to equal word
+4.Set variable “sec” to equal each section from A to Z in the dictionary
+5.Check if “char” letter equals “sec” letter.
+6. If word starts with A then go to section A if not go to next letter
+ alphabetically
+7.If word does start with A then use variable “sec” to go to the section A of
+ the dictionary.
+8.If word does not start with A then use the variable “sec” to go the
+ corresponding section for each letter.
+9.Now that you are in the specific “sec” go to the subsection under the “sec”
+10. If second letter equals A continue to the next letter. If not continue in
+ alphabetical order (A-Z) till each letter of the word of the letter is covered
+11. Present the final word entered by the user and prompt dictionary to define
+ word
+12. Present definition of the word.
+
+Question 3
+
+1. Obtain word from user
+2. Set variable x to equal word
+3. Set variable y to equal word backwards
+4. If variable x equals variable y then identify word as a palindrome.
+5. If variable x does not equal variable y then word is not a palindrome.
+
+Question 4
+
+1. Gather all ingredients ( 2 cups of box mix, 1.5 cups of milk, 1 egg, and 2
+ tablespoon of canola oil).
+2.Get waffle iron and plug it into a power source. 
+3. While waffle iron is heating pour two tablespoons on the hot waffle iron and
+ wait till its fully heated (indicated by green light on waffle iron).
+4. Get a bowl and crack the egg open by gently making an opening and puring the
+ liquid into the bowl
+5. Then pour the remaining ingredients ( 2 cups of box mix, 1.5 cups of milk) and
+ stir together with a whisk or spoon till all ingredients are blended well.
+6. Pour the blended mixture into the waffle iron and close lid
+7. Wait about 5 minutes to let batter bake and carefully remove waffle after 5
+ minutes or till its colored golden brown
+8. Place waffle on a plate ready to be eaten.

@@ -1,0 +1,35 @@
+# File: hw8.py
+# Author: Siril Pattammady
+# Date: 11/20/2016
+# Section: SECTION NUMBER 06
+# E-mail: psiril1@umbc.edu
+# Description:
+# A simulation of the "Sorting Hat" from Harry Potter. It takes in the
+# current house members from a file and stores them in a dictionary.
+# It allows the user to see who's in each house by printing all the houses
+# or a single house at a time. You can also sort the user themself into a house.
+# using a random number generator.
+# Collaboration:
+# COLLABORATION STATEMENT GOES HERE
+
+
+
+# Prints out the name of the house and all the members for a single house in \
+    # the house dictionary.
+def printOneHouse():
+
+
+def main():
+
+
+main()
+
+
+
+
+
+
+
+
+
+

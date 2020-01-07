@@ -1,0 +1,26 @@
+# File: hw2_part1.py.
+# Author: Siril Pattammady
+# Date: 9/18/2016
+# Section: Section 1
+# E-mail:psiril1@umbc.edu
+# Description:
+# Calculates the total cost to buy and sell a large order of books from an
+# online bookstore. 
+# Collaboration:
+# Collaboration was not allowed on this assignment.
+
+def main():
+    bookprice = float(input("What is the price of the book?:$"))
+    print(bookprice)
+    numcopies =int(input("How many copies do you want?"))
+    print(numcopies)
+    subtotal = (bookprice*numcopies)
+    print(subtotal)
+    tax = (subtotal*0.06)
+    print("total tax cost is:$" ,tax)
+    shipping = (numcopies*6.95)
+    print("total shipping fee is:$" ,shipping)
+    Total = (subtotal+tax+shipping)
+    print("The total cost is  :$ " ,Total)
+
+main()

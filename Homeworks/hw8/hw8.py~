@@ -1,0 +1,157 @@
+# File: hw8.py
+# Author: Siril Patta,,ady
+# Date: 11/20/2016
+# Section: SECTION NUMBER 06
+# E-mail: psiril1@umbc.edu
+# Description:
+# This program is like the sorting hat for the Harry Potter book series.
+# The program allows the user to see who is in each house all at once or a single
+# house at a time. It also allows the user to sort themselves into a house using
+# a random number generator.
+# Collaboration:
+# I collaborated with Harsh Patel (harsh3@umbc.edu). He helped me understand how to approach and the
+# logic behind this assignment. He also helped me understand my error with converting to a dictionary.
+
+import random
+
+
+# A function that takes in a file from the user.
+# Input: Takes in a file from the user using an input.
+# Output: Converts the file into a dictionary.
+def convertToDict():
+
+    dict1 = {}
+    
+    file_choice = input("Please enter filename to load from:")
+    open_file = open(file_choice,"r")
+
+    # A loop that strips and splits every line of the file.
+    for every_line in open_file:
+        every_line = every_line.strip()
+        list1 = every_line.split(",")
+        # Distinguish first and second index for house and member.
+        house = list1[0]
+        member = list1[1]
+
+        if house in dict1:
+            dict1[house] = dict1[house] + "," + member
+        else:
+            dict1[house] = member
+
+    open_file.close()
+    return(dict1)
+
+    
+# A function that prints out the name of the house and all the members for a
+# single house in the house dictionary.
+# Input: User selects option '1' in main that will call this function.
+# Input: User enters a house name.
+# Output: If house exists then it'll print out all the members.
+# Output: If house doesn't exist it'll print error message. 
+def printOneHouse(dict1,house_choice):
+    
+    # Membership test
+    if house_choice in dict1:
+        list1 = dict1[house_choice].split(",")
+        print("The members of the House of " + house_choice +"  are")
+        # Loops through the list to print the value for each key.
+        for value in list1:
+            print("\t" + value)
+        
+    else:
+        print("There is no house by the name of ", house_choice,)
+    
+# A function that prints out the name of the name of the house, and all of
+# the members.
+# Input: User selects option '2' in main that will call this function.
+# Ouput: This function will print out all the houses and their members.
+        
+def printAllHouses(dict1):
+
+    for key in dict1:
+        printOneHouse(dict1,key)
+    
+# A function that sorts the user input into a house of their choice.
+# The choice they make isn't gaurenteed because it is a random selection.
+# However, they have a likely chance of being in their house choice.
+# Input: User enters a name and their desired house in main which returns to
+# this function.
+# Output: Prints out the name and whichever house they were sorted into.
+def houseSort(name,house_choice,dict1):
+    
+    list2 = list(dict1)
+
+    # A loop that goes through the list of houses and appends
+    # their choice as many times as the length of the initial list
+    # so they have a higher chance to get their choice.
+    for i in range(len(list2)):
+        list2.append(house_choice)
+    house = random.choice(list2)
+    dict1[house] = dict1[house]+ ", " + name
+    print(name +" was sorted into the house "+ house)
+
+
+
+# A function that prints loading Menu
+# Input : None, just called in main.
+# Output: Prints the menu.
+def printMenu():
+    
+    print("Please make a choice from the menu")
+    print("1 - Print a single house")
+    print("2 - Print all the houses")
+    print("3 - Sort a new person into a house")
+    print("4 - Exit the program")
+
+    
+
+# A function to make sure the user enters a valid choice.
+# Input: User enters an integer for their choice
+# Output: If the users integer choice is invalid then it will reprompt the user.
+ 
+def choiceCheck():
+
+    choice = int(input("Please enter a number between 1 and 4 (inclusive):"))
+
+    # Reprompts user for invalid integer choice.
+    while choice < 1 or choice > 4:
+        print("Please enter a valid choice")
+        choose = int(input("Please make a choice from the menu:"))        
+    else:
+        return choice
+    
+def main():
+
+    # Calls convert to dictionary function, prints menu,
+    # and checks if user choice is valid.
+    dict1 = convertToDict()
+    printMenu()
+    choice = choiceCheck()
+
+    # A loop that goes to each function in each if statment based on
+    # user integer choice.
+    while choice != 4:
+
+        
+        if choice == 1:
+            house_choice = input("What house's members would you like to print?")
+            printOneHouse(dict1,house_choice)
+            print("------------------------")
+            printMenu()
+            choice = choiceCheck()
+            
+        if choice == 2:
+            printAllHouses(dict1)
+            printMenu()
+            choice = choiceCheck()
+            
+        if choice == 3:
+            name = input(" What is the person's name?")
+            house_choice = input("What house do they prefer?")
+            houseSort(name,house_choice,dict1)
+            printMenu()
+            choice = choiceCheck()
+    # Exits the program if choice is 4.
+    print("Thank you for using the Great Houses Program")
+        
+main()
